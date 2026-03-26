@@ -1,0 +1,119 @@
+/* =========================
+   Layout
+   ========================= */
+
+/* Centers main content and constrains width */
+.main-content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Header wrapper (aligns title to the right) */
+.test {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+p {
+  position: relative; /* anchor for decorative arc */
+  margin: 0 30px 30px;
+
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(69, 69, 93);
+}
+
+/* =========================
+   Decorative Arc (Paragraph)
+   ========================= */
+
+/* Subtle "wind arc" in top-left corner of each paragraph */
+p::before {
+  content: "";
+  position: absolute;
+
+  width: 24px;
+  height: 24px;
+
+  /* Create arc using partial border */
+  border: 2px solid rgba(135, 206, 235, 0.7);
+  border-right: transparent;
+  border-bottom: transparent;
+
+  border-radius: 50%;
+
+  /* Position slightly outside paragraph */
+  top: -10px;
+  left: -18px;
+}
+
+/* =========================
+   Heading (Wyndy Motion)
+   ========================= */
+
+h1 {
+  font-family: fantasy;
+  color: rgb(69, 69, 93);
+  padding-right: 12px;
+
+  /* Placeholder border (actual effect is background-based) */
+  border-right: 5px solid transparent;
+
+  /* Vertical flowing "wind" effect */
+  background: linear-gradient(to bottom, transparent, skyblue, transparent)
+    right / 5px 200% no-repeat;
+
+  animation: windFlow 8s ease-in-out infinite;
+}
+
+/* Animates the vertical flow of the "wind" */
+@keyframes windFlow {
+  from {
+    background-position: right -200%;
+  }
+  to {
+    background-position: right 200%;
+  }
+}
+
+/* =========================
+   Divider
+   ========================= */
+
+/* Centered horizontal "wind line" */
+.divider {
+  border: none;
+  height: 5px;
+  width: 50%;
+  margin: 30px auto;
+
+  /* Soft gradient fade */
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(135, 206, 235, 0.6),
+    rgba(135, 206, 235, 1),
+    rgba(135, 206, 235, 0.6),
+    transparent
+  );
+}
+
+/* =========================
+   (Optional) Future Animation
+   ========================= */
+
+/* Horizontal shimmer effect (not currently used) */
+@keyframes breeze {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
