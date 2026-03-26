@@ -1,3 +1,7 @@
+:root {
+  --wind-color: skyblue;
+}
+
 /* =========================
    Layout
    ========================= */
@@ -66,7 +70,12 @@ h1 {
   border-right: 5px solid transparent;
 
   /* Vertical flowing "wind" effect */
-  background: linear-gradient(to bottom, transparent, skyblue, transparent)
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--wind-color),
+      transparent
+    )
     right / 5px 200% no-repeat;
 
   animation: windFlow 8s ease-in-out infinite;
