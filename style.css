@@ -9,7 +9,7 @@
 /* Centers main content and constrains width */
 .main-content {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 750px;
 }
 
 /* Header wrapper (aligns title to the right) */
