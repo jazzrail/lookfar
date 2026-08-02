@@ -1,5 +1,20 @@
 :root {
+  /* --bg: #e4cfb7; */
+  /* --bg: #f7f3ee; */
+  --text: #241f1f;
+  --accent: #89613c;
+  --highlight: #4daa57;
   --wind-color: skyblue;
+  --blue: #4f6d7a;
+}
+body {
+  /* background-color: var(--bg); */
+}
+
+/* Sand to Blue CSS Linear Gradient Background */
+.gradient {
+  background: #3e5151;
+  background: linear-gradient(to right, #3e5151, #decba4);
 }
 
 /* =========================
@@ -13,10 +28,12 @@
 }
 
 /* Header wrapper (aligns title to the right) */
-.test {
+.logo {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 50px;
+  /* margin-right: 50px; */
+  padding-right: 100px;
 }
 
 /* =========================
@@ -30,7 +47,8 @@ p {
   font-size: 1.2rem;
   line-height: 1.2;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(69, 69, 93);
+  /* color: rgb(69, 69, 93); */
+  color: var(--text);
 }
 
 /* =========================
@@ -64,7 +82,7 @@ p::before {
 h1 {
   font-family: fantasy;
   color: rgb(69, 69, 93);
-  padding-right: 12px;
+  padding-right: 12px; /* takes the text 12px away form animation*/
 
   /* Placeholder border (actual effect is background-based) */
   border-right: 5px solid transparent;
